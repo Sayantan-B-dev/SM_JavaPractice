@@ -1,0 +1,39 @@
+Throwable                          // Base class for all exceptions and errors
+├── Exception                      // Represents conditions a program might want to catch
+│   ├── IOException                // Related to Input/Output operations
+│   │   ├── FileNotFoundException  // File not found while attempting to read
+│   │   └── EOFException           // Unexpected end of file while reading
+│   ├── SQLException               // Database access error
+│   ├── ParseException             // Failure during parsing input
+│   ├── ClassNotFoundException     // Class not found during runtime
+│   ├── CloneNotSupportedException // Object cloning not supported
+│   ├── InstantiationException     // Instantiation failure via reflection
+│   ├── IllegalAccessException     // Accessing class method/field illegally
+│   ├── InterruptedException       // Thread was interrupted
+│   ├── InvocationTargetException  // Exception inside a called method (reflection)
+│   ├── NoSuchMethodException      // Method not found via reflection
+│   └── RuntimeException           // Unchecked exceptions — don’t need to be declared
+│       ├── ArithmeticException        // Division by zero or other math errors
+│       ├── ArrayIndexOutOfBoundsException // Invalid array index
+│       ├── IndexOutOfBoundsException     // Superclass for out-of-bounds exceptions
+│       ├── StringIndexOutOfBoundsException // Invalid string index
+│       ├── NullPointerException          // Accessing null object reference
+│       ├── NumberFormatException         // Improper number string format
+│       ├── IllegalArgumentException      // Invalid method argument
+│       ├── IllegalStateException         // Method invoked at illegal/incorrect time
+│       ├── ClassCastException            // Invalid type casting
+│       ├── UnsupportedOperationException // Operation not supported
+│       └── SecurityException             // Security violation
+└── Error                           // Serious problems; should not be caught usually
+    ├── VirtualMachineError         // Internal JVM errors
+    │   ├── OutOfMemoryError        // Not enough heap memory
+    │   ├── StackOverflowError      // Stack memory exhausted (infinite recursion)
+    │   └── InternalError           // JVM internal bug
+    ├── AssertionError              // Thrown on failed assertions
+    ├── NoClassDefFoundError        // Class was present at compile time but missing at runtime
+    └── LinkageError                // Problem with loading classes
+        ├── AbstractMethodError     // Calling an abstract method implementation not found
+        ├── UnsatisfiedLinkError    // Native library not found
+        ├── ClassFormatError        // Invalid bytecode format
+        ├── VerifyError             // Verification failed while loading class
+        └── UnsupportedClassVersionError // Class compiled with newer Java version

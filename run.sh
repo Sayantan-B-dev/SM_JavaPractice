@@ -1,4 +1,4 @@
-var=ForEach
+var=RecordClasses
 
 echo "Running $var"
 mkdir "$var"

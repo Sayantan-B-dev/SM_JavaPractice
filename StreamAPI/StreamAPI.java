@@ -6,13 +6,13 @@ import java.util.stream.Stream;
 public class StreamAPI {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter Operation no (1,2,3):");
+        System.out.println("Enter Operation no (1,2,3,4):");
         int input = scanner.nextInt();
         System.out.println("--------------------");
+        List<String> arr;//for case 4
         switch (input) {
             case 1:
                 try {
-                    
                     List<String> str = Arrays.asList("one", "two", "three", "four", "five");
 
                     Stream<String> s1 = str.stream();
@@ -58,6 +58,27 @@ public class StreamAPI {
                 } catch (Exception e) {
                     System.out.println("An error occurred: " + e.getMessage());
                 }
+                break;
+            case 4:
+                var i = 4;
+                var j = "ok";
+                //var k;// This will cause a compile-time error because 'k' is not initialized.
+                System.out.println("Using var: " + i + ", " + j);
+
+                arr= new ArrayList<>();
+                arr.add("Hello");
+                arr.add("World");
+                System.out.println("using var from the outside arr: " + arr);
+
+
+                var obj = new Object() {
+                    void display() {
+                        System.out.println("Using var in anonymous class: " + i + ", " + j);
+                    }
+                };
+                obj.display();
+            
+                
                 break;
             default:
                 System.out.println("Invalid input, please enter a number between 1 and 3.");
